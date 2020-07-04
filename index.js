@@ -3,7 +3,7 @@ var words = require("random-words")
 var express = require("express")
 var app = express()
 
-var wordList = []
+var wordList = [];
 
 var player = {
     name: "Guest 1",
@@ -17,7 +17,6 @@ var players = [];
 function generateWords() {
     wordList = words(15);
 }
-
 
 app.use("/stuff", express.static(__dirname + "/stuff"))
 app.set("view engine", "pug")

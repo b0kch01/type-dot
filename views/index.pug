@@ -15,16 +15,16 @@ html(lang="en")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js")        
         script(src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js")
         script(src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js")
-        script(src="/stuff/scripts/main.js")
+        script(defer src="/stuff/scripts/game.js")
 
         title type.
     body
         .container
             .gamecube
-                .progress
-                    | progress
+                #progress WPM: 
                 #words
                     each w in words
                         .word= w
-                input#input-field(type="text" spellcheck="off" autocorrect="off" autocomplete="off" autocapitalize="off" tabindex="1")
-        script var wordList = #{words};
+                input#input-field(disabled type="text" spellcheck="off" autocorrect="off" autocomplete="off" autocapitalize="off" tabindex="1")
+        script 
+            | const wordList = "#{words}".split(",");
