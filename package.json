@@ -19,6 +19,6 @@
   "dependencies": {
     "express": "^4.17.1",
     "pug": "^3.0.0",
-    "random-words": "^1.1.1"
+    "random-words": "^1.2.0"
   }
 }
